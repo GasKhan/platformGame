@@ -86,6 +86,110 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/images/background.png":
+/*!***********************************!*\
+  !*** ./src/images/background.png ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "072d51bcc9c09311d4c2a6708b05bddc.png");
+
+/***/ }),
+
+/***/ "./src/images/hills.png":
+/*!******************************!*\
+  !*** ./src/images/hills.png ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "cfffe4c371f5e11d372b398a87c51dd0.png");
+
+/***/ }),
+
+/***/ "./src/images/platform.png":
+/*!*********************************!*\
+  !*** ./src/images/platform.png ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "ffab39d3487de561be1a081fcfb3806d.png");
+
+/***/ }),
+
+/***/ "./src/images/platformSmallTall.png":
+/*!******************************************!*\
+  !*** ./src/images/platformSmallTall.png ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "0587f9be8e442eb74b2fe283bbf1a947.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteRunLeft.png":
+/*!**************************************!*\
+  !*** ./src/images/spriteRunLeft.png ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "c67ea51444aafa9bdcd5bdfd4f4a55bb.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteRunRight.png":
+/*!***************************************!*\
+  !*** ./src/images/spriteRunRight.png ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "a2f75989924952a7e49ce0405d487c93.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteStandLeft.png":
+/*!****************************************!*\
+  !*** ./src/images/spriteStandLeft.png ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "11514f48f22f6d8e3cf748e45e3e1ffb.png");
+
+/***/ }),
+
+/***/ "./src/images/spriteStandRight.png":
+/*!*****************************************!*\
+  !*** ./src/images/spriteStandRight.png ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "01e8f15e899155c68950c40e0a6b8df0.png");
+
+/***/ }),
+
 /***/ "./src/js/canvas.js":
 /*!**************************!*\
   !*** ./src/js/canvas.js ***!
@@ -95,8 +199,14 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/js/utils.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_utils__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _images_platform_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/platform.png */ "./src/images/platform.png");
+/* harmony import */ var _images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/platformSmallTall.png */ "./src/images/platformSmallTall.png");
+/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/background.png */ "./src/images/background.png");
+/* harmony import */ var _images_hills_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/hills.png */ "./src/images/hills.png");
+/* harmony import */ var _images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/spriteStandLeft.png */ "./src/images/spriteStandLeft.png");
+/* harmony import */ var _images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/spriteStandRight.png */ "./src/images/spriteStandRight.png");
+/* harmony import */ var _images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/spriteRunLeft.png */ "./src/images/spriteRunLeft.png");
+/* harmony import */ var _images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/spriteRunRight.png */ "./src/images/spriteRunRight.png");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -104,105 +214,321 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
+
+
+
+
+
+
+
 var canvas = document.querySelector('canvas');
-var c = canvas.getContext('2d');
-canvas.width = innerWidth;
-canvas.height = innerHeight;
-var mouse = {
-  x: innerWidth / 2,
-  y: innerHeight / 2
-};
-var colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']; // Event Listeners
+var context = canvas.getContext('2d');
+canvas.height = 576;
+canvas.width = 1024;
+var gravity = 0.15;
 
-addEventListener('mousemove', function (event) {
-  mouse.x = event.clientX;
-  mouse.y = event.clientY;
-});
-addEventListener('resize', function () {
-  canvas.width = innerWidth;
-  canvas.height = innerHeight;
-  init();
-}); // Objects
+var Player = /*#__PURE__*/function () {
+  function Player() {
+    _classCallCheck(this, Player);
 
-var _Object = /*#__PURE__*/function () {
-  function Object(x, y, radius, color) {
-    _classCallCheck(this, Object);
-
-    this.x = x;
-    this.y = y;
-    this.radius = radius;
-    this.color = color;
+    this.position = {
+      x: 100,
+      y: 100
+    };
+    this.height = 150;
+    this.width = 66;
+    this.speed = 10;
+    this.velocity = {
+      x: 0,
+      y: 0
+    };
+    this.frame = 0;
+    this.sprites = {
+      stand: {
+        right: createImage(_images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_5__["default"]),
+        left: createImage(_images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_4__["default"]),
+        cropWidth: 177,
+        width: 66
+      },
+      run: {
+        right: createImage(_images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_7__["default"]),
+        left: createImage(_images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_6__["default"]),
+        cropWidth: 341,
+        width: 127.875
+      }
+    };
+    this.currentSprite = this.sprites.stand.right;
+    this.cropWidth = this.sprites.stand.cropWidth;
   }
 
-  _createClass(Object, [{
-    key: "draw",
-    value: function draw() {
-      c.beginPath();
-      c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-      c.fillStyle = this.color;
-      c.fill();
-      c.closePath();
-    }
-  }, {
+  _createClass(Player, [{
     key: "update",
     value: function update() {
       this.draw();
+      this.frame++;
+      if (this.frame > 59 && (this.currentSprite == this.sprites.stand.right || this.currentSprite == this.sprites.stand.left)) this.frame = 0;else if (this.frame > 29 && (this.currentSprite == this.sprites.run.right || this.currentSprite == this.sprites.run.left)) this.frame = 0;
+      this.position.y += this.velocity.y;
+      this.position.x += this.velocity.x;
+
+      if (this.position.y + this.height + this.velocity.y <= canvas.height) {
+        this.velocity.y += gravity;
+      }
+    }
+  }, {
+    key: "draw",
+    value: function draw() {
+      context.drawImage(this.currentSprite, this.cropWidth * this.frame, 0, this.cropWidth, 400, this.position.x, this.position.y, this.width, this.height);
     }
   }]);
 
-  return Object;
-}(); // Implementation
+  return Player;
+}();
 
+var Platform = /*#__PURE__*/function () {
+  function Platform(_ref) {
+    var x = _ref.x,
+        y = _ref.y,
+        image = _ref.image;
 
-var objects;
+    _classCallCheck(this, Platform);
+
+    this.position = {
+      x: x,
+      y: y
+    };
+    this.image = image;
+    this.height = this.image.height;
+    this.width = this.image.width;
+  }
+
+  _createClass(Platform, [{
+    key: "draw",
+    value: function draw() {
+      context.drawImage(this.image, this.position.x, this.position.y);
+    }
+  }]);
+
+  return Platform;
+}();
+
+var GenericObject = /*#__PURE__*/function () {
+  function GenericObject(_ref2) {
+    var x = _ref2.x,
+        y = _ref2.y,
+        image = _ref2.image;
+
+    _classCallCheck(this, GenericObject);
+
+    this.position = {
+      x: x,
+      y: y
+    };
+    this.image = image;
+    this.height = this.image.height;
+    this.width = this.image.width;
+  }
+
+  _createClass(GenericObject, [{
+    key: "draw",
+    value: function draw() {
+      context.drawImage(this.image, this.position.x, this.position.y);
+    }
+  }]);
+
+  return GenericObject;
+}();
+
+function createImage(imageSrc) {
+  var image = new Image();
+  image.src = imageSrc;
+  return image;
+}
+
+var platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
+var player = new Player();
+var platforms = [];
+var genericObjects = [];
+var lastKey;
+var keys = {
+  left: {
+    isPressed: false
+  },
+  right: {
+    isPressed: false
+  }
+};
+var scrollProgress = 0;
 
 function init() {
-  objects = [];
-
-  for (var i = 0; i < 400; i++) {// objects.push()
-  }
-} // Animation Loop
-
-
-function animate() {
-  requestAnimationFrame(animate);
-  c.clearRect(0, 0, canvas.width, canvas.height);
-  c.fillText('HTML CANVAS BOILERPLATE', mouse.x, mouse.y); // objects.forEach(object => {
-  //  object.update()
-  // })
+  platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  player = new Player();
+  platforms = [new Platform({
+    x: 0,
+    y: 460,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width - 3,
+    y: 460,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 2 + 100,
+    y: 460,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 3 + 250,
+    y: 460,
+    image: platformImage
+  }), new Platform({
+    x: platformImage.width * 4 - 40,
+    y: 235,
+    image: createImage(_images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_1__["default"])
+  }), new Platform({
+    x: platformImage.width * 4 + 800,
+    y: 460,
+    image: platformImage
+  })];
+  genericObjects = [new GenericObject({
+    x: -1,
+    y: -1,
+    image: createImage(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
+  }), new GenericObject({
+    x: 0,
+    y: 0,
+    image: createImage(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
+  }), new GenericObject({
+    x: 0,
+    y: 0,
+    image: createImage(_images_hills_png__WEBPACK_IMPORTED_MODULE_3__["default"])
+  })];
+  scrollProgress = 0;
 }
+
+var animate = function animate() {
+  requestAnimationFrame(animate);
+  context.fillStyle = '#fff';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  if (keys.left.isPressed && player.position.x > 100 || keys.left.isPressed && player.position.x > 0 && scrollProgress === 0) {
+    player.velocity.x -= player.speed;
+  } else if (keys.right.isPressed && player.position.x < 400) {
+    player.velocity.x += player.speed;
+  } else {
+    player.velocity.x = 0;
+
+    if (keys.left.isPressed && scrollProgress > 0) {
+      scrollProgress -= player.speed;
+      platforms.forEach(function (platform) {
+        platform.position.x += player.speed;
+      });
+      genericObjects.forEach(function (genericObject) {
+        return genericObject.position.x += player.speed * 0.66;
+      });
+    } else if (keys.right.isPressed) {
+      scrollProgress += player.speed;
+      platforms.forEach(function (platform) {
+        platform.position.x -= player.speed;
+      });
+      genericObjects.forEach(function (genericObject) {
+        return genericObject.position.x -= player.speed * 0.66;
+      });
+    }
+  }
+
+  platforms.forEach(function (platform) {
+    if (player.position.y + player.height <= platform.position.y && player.position.y + player.height + player.velocity.y >= platform.position.y && player.position.x + player.width >= platform.position.x && player.position.x < platform.position.x + platform.width) {
+      player.velocity.y = 0;
+    }
+  });
+
+  if (keys.right.isPressed && lastKey === 'right' && player.currentSprite !== player.sprites.run.right) {
+    player.frame = 1;
+    player.currentSprite = player.sprites.run.right;
+    player.cropWidth = player.sprites.run.cropWidth;
+    player.width = player.sprites.run.width;
+  } else if (keys.left.isPressed && lastKey === 'left' && player.currentSprite !== player.sprites.run.left) {
+    player.frame = 1;
+    player.currentSprite = player.sprites.run.left;
+    player.cropWidth = player.sprites.run.cropWidth;
+    player.width = player.sprites.run.width;
+  } else if (!keys.left.isPressed && lastKey === 'left' && player.currentSprite !== player.sprites.stand.left) {
+    player.frame = 1;
+    player.currentSprite = player.sprites.stand.left;
+    player.cropWidth = player.sprites.stand.cropWidth;
+    player.width = player.sprites.stand.width;
+  } else if (!keys.right.isPressed && lastKey === 'right' && player.currentSprite !== player.sprites.stand.right) {
+    player.frame = 1;
+    player.currentSprite = player.sprites.stand.right;
+    player.cropWidth = player.sprites.stand.cropWidth;
+    player.width = player.sprites.stand.width;
+  }
+
+  if (scrollProgress > platformImage.width * 4 + 800) {
+    console.log('You won!');
+  }
+
+  if (player.position.y > canvas.height) init();
+  genericObjects.forEach(function (genericObject) {
+    return genericObject.draw();
+  });
+  platforms.forEach(function (platform) {
+    return platform.draw();
+  });
+  player.update();
+};
 
 init();
 animate();
+window.addEventListener('keydown', function (_ref3) {
+  var keyCode = _ref3.keyCode;
 
-/***/ }),
+  switch (keyCode) {
+    case 65:
+      {
+        keys.left.isPressed = true;
+        lastKey = 'left';
+        break;
+      }
 
-/***/ "./src/js/utils.js":
-/*!*************************!*\
-  !*** ./src/js/utils.js ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+    case 68:
+      {
+        keys.right.isPressed = true;
+        lastKey = 'right';
+        break;
+      }
 
-function randomIntFromRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+    case 87:
+      {
+        player.velocity.y -= 5;
+        break;
+      }
 
-function randomColor(colors) {
-  return colors[Math.floor(Math.random() * colors.length)];
-}
+    case 83:
+      {}
+  }
+});
+window.addEventListener('keyup', function (_ref4) {
+  var keyCode = _ref4.keyCode;
 
-function distance(x1, y1, x2, y2) {
-  var xDist = x2 - x1;
-  var yDist = y2 - y1;
-  return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
-}
+  switch (keyCode) {
+    case 65:
+      {
+        keys.left.isPressed = false;
+        break;
+      }
 
-module.exports = {
-  randomIntFromRange: randomIntFromRange,
-  randomColor: randomColor,
-  distance: distance
-};
+    case 68:
+      {
+        keys.right.isPressed = false;
+        break;
+      }
+
+    case 87:
+      {
+        player.velocity.y = 0;
+        break;
+      }
+  }
+});
 
 /***/ })
 
