@@ -190,23 +190,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/canvas.js":
-/*!**************************!*\
-  !*** ./src/js/canvas.js ***!
-  \**************************/
-/*! no exports provided */
+/***/ "./src/js/GenericObject.js":
+/*!*********************************!*\
+  !*** ./src/js/GenericObject.js ***!
+  \*********************************/
+/*! exports provided: GenericObject */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _images_platform_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/platform.png */ "./src/images/platform.png");
-/* harmony import */ var _images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/platformSmallTall.png */ "./src/images/platformSmallTall.png");
-/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/background.png */ "./src/images/background.png");
-/* harmony import */ var _images_hills_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/hills.png */ "./src/images/hills.png");
-/* harmony import */ var _images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/spriteStandLeft.png */ "./src/images/spriteStandLeft.png");
-/* harmony import */ var _images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/spriteStandRight.png */ "./src/images/spriteStandRight.png");
-/* harmony import */ var _images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/spriteRunLeft.png */ "./src/images/spriteRunLeft.png");
-/* harmony import */ var _images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/spriteRunRight.png */ "./src/images/spriteRunRight.png");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GenericObject", function() { return GenericObject; });
+/* harmony import */ var _canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./canvas */ "./src/js/canvas.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -214,75 +208,52 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
+var GenericObject = /*#__PURE__*/function () {
+  function GenericObject(_ref) {
+    var x = _ref.x,
+        y = _ref.y,
+        image = _ref.image;
 
-
-
-
-
-
-
-var canvas = document.querySelector('canvas');
-var context = canvas.getContext('2d');
-canvas.height = 576;
-canvas.width = 1024;
-var gravity = 0.15;
-
-var Player = /*#__PURE__*/function () {
-  function Player() {
-    _classCallCheck(this, Player);
+    _classCallCheck(this, GenericObject);
 
     this.position = {
-      x: 100,
-      y: 100
+      x: x,
+      y: y
     };
-    this.height = 150;
-    this.width = 66;
-    this.speed = 10;
-    this.velocity = {
-      x: 0,
-      y: 0
-    };
-    this.frame = 0;
-    this.sprites = {
-      stand: {
-        right: createImage(_images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_5__["default"]),
-        left: createImage(_images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_4__["default"]),
-        cropWidth: 177,
-        width: 66
-      },
-      run: {
-        right: createImage(_images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_7__["default"]),
-        left: createImage(_images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_6__["default"]),
-        cropWidth: 341,
-        width: 127.875
-      }
-    };
-    this.currentSprite = this.sprites.stand.right;
-    this.cropWidth = this.sprites.stand.cropWidth;
+    this.image = image;
+    this.height = this.image.height;
+    this.width = this.image.width;
   }
 
-  _createClass(Player, [{
-    key: "update",
-    value: function update() {
-      this.draw();
-      this.frame++;
-      if (this.frame > 59 && (this.currentSprite == this.sprites.stand.right || this.currentSprite == this.sprites.stand.left)) this.frame = 0;else if (this.frame > 29 && (this.currentSprite == this.sprites.run.right || this.currentSprite == this.sprites.run.left)) this.frame = 0;
-      this.position.y += this.velocity.y;
-      this.position.x += this.velocity.x;
-
-      if (this.position.y + this.height + this.velocity.y <= canvas.height) {
-        this.velocity.y += gravity;
-      }
-    }
-  }, {
+  _createClass(GenericObject, [{
     key: "draw",
     value: function draw() {
-      context.drawImage(this.currentSprite, this.cropWidth * this.frame, 0, this.cropWidth, 400, this.position.x, this.position.y, this.width, this.height);
+      _canvas__WEBPACK_IMPORTED_MODULE_0__["context"].drawImage(this.image, this.position.x, this.position.y);
     }
   }]);
 
-  return Player;
+  return GenericObject;
 }();
+
+/***/ }),
+
+/***/ "./src/js/Platform.js":
+/*!****************************!*\
+  !*** ./src/js/Platform.js ***!
+  \****************************/
+/*! exports provided: Platform */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Platform", function() { return Platform; });
+/* harmony import */ var _canvas__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./canvas */ "./src/js/canvas.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 
 var Platform = /*#__PURE__*/function () {
   function Platform(_ref) {
@@ -304,50 +275,140 @@ var Platform = /*#__PURE__*/function () {
   _createClass(Platform, [{
     key: "draw",
     value: function draw() {
-      context.drawImage(this.image, this.position.x, this.position.y);
+      _canvas__WEBPACK_IMPORTED_MODULE_0__["context"].drawImage(this.image, this.position.x, this.position.y);
     }
   }]);
 
   return Platform;
 }();
 
-var GenericObject = /*#__PURE__*/function () {
-  function GenericObject(_ref2) {
-    var x = _ref2.x,
-        y = _ref2.y,
-        image = _ref2.image;
+/***/ }),
 
-    _classCallCheck(this, GenericObject);
+/***/ "./src/js/Player.js":
+/*!**************************!*\
+  !*** ./src/js/Player.js ***!
+  \**************************/
+/*! exports provided: Player */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Player", function() { return Player; });
+/* harmony import */ var _images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/spriteStandLeft.png */ "./src/images/spriteStandLeft.png");
+/* harmony import */ var _images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/spriteStandRight.png */ "./src/images/spriteStandRight.png");
+/* harmony import */ var _images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/spriteRunLeft.png */ "./src/images/spriteRunLeft.png");
+/* harmony import */ var _images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/spriteRunRight.png */ "./src/images/spriteRunRight.png");
+/* harmony import */ var _createImage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./createImage */ "./src/js/createImage.js");
+/* harmony import */ var _canvas__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./canvas */ "./src/js/canvas.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+
+
+
+
+
+var gravity = 0.15;
+var Player = /*#__PURE__*/function () {
+  function Player() {
+    _classCallCheck(this, Player);
 
     this.position = {
-      x: x,
-      y: y
+      x: 100,
+      y: 100
     };
-    this.image = image;
-    this.height = this.image.height;
-    this.width = this.image.width;
+    this.height = 150;
+    this.width = 66;
+    this.speed = 10;
+    this.velocity = {
+      x: 0,
+      y: 0
+    };
+    this.frame = 0;
+    this.sprites = {
+      stand: {
+        right: Object(_createImage__WEBPACK_IMPORTED_MODULE_4__["createImage"])(_images_spriteStandRight_png__WEBPACK_IMPORTED_MODULE_1__["default"]),
+        left: Object(_createImage__WEBPACK_IMPORTED_MODULE_4__["createImage"])(_images_spriteStandLeft_png__WEBPACK_IMPORTED_MODULE_0__["default"]),
+        cropWidth: 177,
+        width: 66
+      },
+      run: {
+        right: Object(_createImage__WEBPACK_IMPORTED_MODULE_4__["createImage"])(_images_spriteRunRight_png__WEBPACK_IMPORTED_MODULE_3__["default"]),
+        left: Object(_createImage__WEBPACK_IMPORTED_MODULE_4__["createImage"])(_images_spriteRunLeft_png__WEBPACK_IMPORTED_MODULE_2__["default"]),
+        cropWidth: 341,
+        width: 127.875
+      }
+    };
+    this.currentSprite = this.sprites.stand.right;
+    this.cropWidth = this.sprites.stand.cropWidth;
   }
 
-  _createClass(GenericObject, [{
+  _createClass(Player, [{
+    key: "update",
+    value: function update() {
+      this.draw();
+      this.frame++;
+      if (this.frame > 59 && (this.currentSprite == this.sprites.stand.right || this.currentSprite == this.sprites.stand.left)) this.frame = 0;else if (this.frame > 29 && (this.currentSprite == this.sprites.run.right || this.currentSprite == this.sprites.run.left)) this.frame = 0;
+      this.position.y += this.velocity.y;
+      this.position.x += this.velocity.x;
+
+      if (this.position.y + this.height + this.velocity.y <= _canvas__WEBPACK_IMPORTED_MODULE_5__["canvas"].height) {
+        this.velocity.y += gravity;
+      }
+    }
+  }, {
     key: "draw",
     value: function draw() {
-      context.drawImage(this.image, this.position.x, this.position.y);
+      _canvas__WEBPACK_IMPORTED_MODULE_5__["context"].drawImage(this.currentSprite, this.cropWidth * this.frame, 0, this.cropWidth, 400, this.position.x, this.position.y, this.width, this.height);
     }
   }]);
 
-  return GenericObject;
+  return Player;
 }();
 
-function createImage(imageSrc) {
-  var image = new Image();
-  image.src = imageSrc;
-  return image;
-}
+/***/ }),
 
-var platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
-var player = new Player();
+/***/ "./src/js/canvas.js":
+/*!**************************!*\
+  !*** ./src/js/canvas.js ***!
+  \**************************/
+/*! exports provided: canvas, context */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canvas", function() { return canvas; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "context", function() { return context; });
+/* harmony import */ var _images_platform_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/platform.png */ "./src/images/platform.png");
+/* harmony import */ var _images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/platformSmallTall.png */ "./src/images/platformSmallTall.png");
+/* harmony import */ var _images_background_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/background.png */ "./src/images/background.png");
+/* harmony import */ var _images_hills_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/hills.png */ "./src/images/hills.png");
+/* harmony import */ var _Player__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Player */ "./src/js/Player.js");
+/* harmony import */ var _Platform__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Platform */ "./src/js/Platform.js");
+/* harmony import */ var _createImage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./createImage */ "./src/js/createImage.js");
+/* harmony import */ var _GenericObject__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./GenericObject */ "./src/js/GenericObject.js");
+
+
+
+
+
+
+
+
+var canvas = document.querySelector('canvas');
+var context = canvas.getContext('2d');
+canvas.height = 576;
+canvas.width = 1024;
+var platformImage = Object(_createImage__WEBPACK_IMPORTED_MODULE_6__["createImage"])(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
+var player = new _Player__WEBPACK_IMPORTED_MODULE_4__["Player"]();
 var platforms = [];
 var genericObjects = [];
+var gap = 100;
 var lastKey;
 var keys = {
   left: {
@@ -360,45 +421,44 @@ var keys = {
 var scrollProgress = 0;
 
 function init() {
-  platformImage = createImage(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
-  player = new Player();
-  platforms = [new Platform({
+  platformImage = Object(_createImage__WEBPACK_IMPORTED_MODULE_6__["createImage"])(_images_platform_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  player = new _Player__WEBPACK_IMPORTED_MODULE_4__["Player"]();
+  platforms = [new _Platform__WEBPACK_IMPORTED_MODULE_5__["Platform"]({
     x: 0,
-    y: 460,
-    image: platformImage
-  }), new Platform({
-    x: platformImage.width - 3,
-    y: 460,
-    image: platformImage
-  }), new Platform({
-    x: platformImage.width * 2 + 100,
-    y: 460,
-    image: platformImage
-  }), new Platform({
-    x: platformImage.width * 3 + 250,
-    y: 460,
-    image: platformImage
-  }), new Platform({
-    x: platformImage.width * 4 - 40,
-    y: 235,
-    image: createImage(_images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_1__["default"])
-  }), new Platform({
-    x: platformImage.width * 4 + 800,
     y: 460,
     image: platformImage
   })];
-  genericObjects = [new GenericObject({
+
+  for (var i = 1; i <= 27; i++) {
+    if (i % 3 === 0) gap += 200;
+
+    if (i % 5 === 0) {
+      platforms.push(new _Platform__WEBPACK_IMPORTED_MODULE_5__["Platform"]({
+        x: platformImage.width * i - 40,
+        y: 355,
+        image: Object(_createImage__WEBPACK_IMPORTED_MODULE_6__["createImage"])(_images_platformSmallTall_png__WEBPACK_IMPORTED_MODULE_1__["default"])
+      }));
+    } else {
+      platforms.push(new _Platform__WEBPACK_IMPORTED_MODULE_5__["Platform"]({
+        x: platformImage.width * i + gap,
+        y: 460,
+        image: platformImage
+      }));
+    }
+  }
+
+  genericObjects = [new _GenericObject__WEBPACK_IMPORTED_MODULE_7__["GenericObject"]({
     x: -1,
     y: -1,
-    image: createImage(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
-  }), new GenericObject({
+    image: Object(_createImage__WEBPACK_IMPORTED_MODULE_6__["createImage"])(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
+  }), new _GenericObject__WEBPACK_IMPORTED_MODULE_7__["GenericObject"]({
     x: 0,
     y: 0,
-    image: createImage(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
-  }), new GenericObject({
+    image: Object(_createImage__WEBPACK_IMPORTED_MODULE_6__["createImage"])(_images_background_png__WEBPACK_IMPORTED_MODULE_2__["default"])
+  }), new _GenericObject__WEBPACK_IMPORTED_MODULE_7__["GenericObject"]({
     x: 0,
     y: 0,
-    image: createImage(_images_hills_png__WEBPACK_IMPORTED_MODULE_3__["default"])
+    image: Object(_createImage__WEBPACK_IMPORTED_MODULE_6__["createImage"])(_images_hills_png__WEBPACK_IMPORTED_MODULE_3__["default"])
   })];
   scrollProgress = 0;
 }
@@ -462,7 +522,7 @@ var animate = function animate() {
     player.width = player.sprites.stand.width;
   }
 
-  if (scrollProgress > platformImage.width * 4 + 800) {
+  if (scrollProgress > platformImage.width * 27 + gap) {
     console.log('You won!');
   }
 
@@ -477,9 +537,10 @@ var animate = function animate() {
 };
 
 init();
-animate();
-window.addEventListener('keydown', function (_ref3) {
-  var keyCode = _ref3.keyCode;
+animate(); //Event listeners
+
+window.addEventListener('keydown', function (_ref) {
+  var keyCode = _ref.keyCode;
 
   switch (keyCode) {
     case 65:
@@ -498,7 +559,7 @@ window.addEventListener('keydown', function (_ref3) {
 
     case 87:
       {
-        player.velocity.y -= 5;
+        player.velocity.y -= 10;
         break;
       }
 
@@ -506,8 +567,8 @@ window.addEventListener('keydown', function (_ref3) {
       {}
   }
 });
-window.addEventListener('keyup', function (_ref4) {
-  var keyCode = _ref4.keyCode;
+window.addEventListener('keyup', function (_ref2) {
+  var keyCode = _ref2.keyCode;
 
   switch (keyCode) {
     case 65:
@@ -529,6 +590,24 @@ window.addEventListener('keyup', function (_ref4) {
       }
   }
 });
+
+/***/ }),
+
+/***/ "./src/js/createImage.js":
+/*!*******************************!*\
+  !*** ./src/js/createImage.js ***!
+  \*******************************/
+/*! exports provided: createImage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createImage", function() { return createImage; });
+function createImage(imageSrc) {
+  var image = new Image();
+  image.src = imageSrc;
+  return image;
+}
 
 /***/ })
 
